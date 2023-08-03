@@ -23,9 +23,8 @@ async def qr_scanner(message: types.Message, state: FSMContext):
     if respones != False:
         if respones == "Xato" or respones == "Exception: An invalid request URI was provided. Either the request URI must be an absolute URI or BaseAddress must be set.":
             await emoji.delete()
-            await message.reply("Kechirasiz QR-code scanner ishlamay qoldi.\n"
-                                "Hozircha ID raqamdan foydalanib turing.\n\n"
-                                "Xatoliklar uchun uzr soraymiz 🙏", reply_markup=menu_back_button)
+            await message.reply("Kechirasiz QR-code scanner ishlashda xatolik yuz berdi!\n\n"
+                                "Hozirda ID raqamdan foydalansangiz ham boladi👇.\n", reply_markup=menu_back_button)
             await state.finish()
         else:
             await emoji.delete()
