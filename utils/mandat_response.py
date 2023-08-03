@@ -38,12 +38,12 @@ def return_id_pprint(id):
 				answers.append(f"{i+1}-{response.json()['answers'][i]['answer']}: {response.json()['answers'][i]['check']}")
 			answers = '\n'.join(answers)
 			return (f'{user_info}\n'
-				   f'________________________\n\n'
+				   f'________________________________________________\n\n'
 				   f'{block_answer}\n'
 					f"📌 Umumiy ball-{response.json()['imtiyoz'][0]['Umumiyball']}\n"
-					f'________________________\n\n'
+					f'________________________________________________\n\n'
 					f'{answers}\n\n'
-					f'________________________\n\n'
+					f'________________________________________________\n\n'
 					f"Bu men👉: <a href='https://t.me/e_Mandatbot'>E-Mandat 2023 | Rasmiy bot</a>")
 		else:
 			"""Foydalanuvchining ma'lumotlari"""

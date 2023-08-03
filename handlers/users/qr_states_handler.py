@@ -30,7 +30,7 @@ async def qr_scanner(message: types.Message, state: FSMContext):
         else:
             await emoji.delete()
             await message.answer(f"{respones}\n\n"
-                                 f"________________________\n\n"
+                                 f"________________________________________________\n\n"
                                  f"Bu men👉: <a href='https://t.me/e_Mandatbot'>E-Mandat 2023 | Rasmiy bot</a>", reply_markup=menu_back_button)
             await state.finish()
     elif respones == False:
