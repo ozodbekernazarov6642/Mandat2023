@@ -28,7 +28,7 @@ async def Qr_answer(photo: types.photo_size.PhotoSize) -> str:
 if __name__ =="__main__":
     url = "https://qr-scanner-api.p.rapidapi.com/api/QR/scanimageurl"
 
-    querystring = {"imageUrl": f"http://telegra.ph//file/8f8b3b33df3a498189342.jpg"}
+    querystring = {"imageUrl": f"https://seeklogo.com/images/D/davlat-test-markazi-logo-EA6FC73C7F-seeklogo.com.png"}
 
     headers = {
         "X-RapidAPI-Key": "e1138de0bamshf4bab9b76bb7f1ep16ce46jsn30e66de2587d",
