@@ -21,7 +21,7 @@ async def qr_scanner(message: types.Message, state: FSMContext):
     emoji = await message.answer_sticker(InputFile(path_or_bytesio='emoji/AnimatedSticker.tgs'))
     respones = await Qr_answer(photo)
     if respones != False:
-        if respones == "Xato":
+        if respones == "Xato" or respones == "Exception: An invalid request URI was provided. Either the request URI must be an absolute URI or BaseAddress must be set.":
             await emoji.delete()
             await message.reply("Kechirasiz QR-code scanner ishlamay qoldi.\n"
                                 "Hozircha ID raqamdan foydalanib turing.\n\n"
