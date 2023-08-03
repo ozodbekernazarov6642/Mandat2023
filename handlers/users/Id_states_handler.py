@@ -23,10 +23,10 @@ async def result_id(message: types.Message, state: FSMContext):
             answer = return_id_pprint(message.text)
             await stiker.delete()
             await message.answer(answer, reply_markup=menu_back_button)
-
+            await state.finish()
         except:
             await message.reply("Iltimos ID raqam kiriting", reply_markup=menu_back_button)
             await next(result_id)
 
-        await state.finish()
+            await state.finish()
 

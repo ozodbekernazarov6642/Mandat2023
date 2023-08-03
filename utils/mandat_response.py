@@ -42,7 +42,9 @@ def return_id_pprint(id):
 				   f'{block_answer}\n'
 					f"📌 Umumiy ball-{response.json()['imtiyoz'][0]['Umumiyball']}\n"
 					f'________________________\n\n'
-					f'{answers}')
+					f'{answers}\n\n'
+					f'________________________\n\n'
+					f"Bu men👉: <a href='https://t.me/e_Mandatbot'>E-Mandat 2023 | Rasmiy bot</a>")
 		else:
 			"""Foydalanuvchining ma'lumotlari"""
 			user_id = response.json()['short'][0]['id']
@@ -50,7 +52,9 @@ def return_id_pprint(id):
 			user_status = response.json()['short'][0]['tavsiya']
 			user_info = (f" 🔰 {user_name} \n\n "
 						 f"🆔 {user_id} \n\n"
-						 f" 🗣 {user_status}")
+						 f" 🗣 {user_status}\n\n"
+						 f"________________________\n\n"
+						 f"Bu men👉: <a href='https://t.me/e_Mandatbot'>E-Mandat 2023 | Rasmiy bot</a>")
 
 			return f'{user_info}'
 
