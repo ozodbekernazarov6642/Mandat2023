@@ -3,6 +3,7 @@ from aiogram.dispatcher.filters.builtin import CommandStart
 from states.id_qr_states import menu_State
 from keyboards.default.input_button import menu_Button
 from loader import dp
+import logging
 
 
 @dp.message_handler(CommandStart())
