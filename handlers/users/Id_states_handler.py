@@ -11,7 +11,7 @@ from loader import dp
 
 @dp.message_handler(Text(equals='🆔 ID-raqam orqali'))
 async def answer_handler_id(message: types.Message):
-    await message.answer("Abituriyent ID raqamini kiriting👇", reply_markup=menu_back_button)
+    await message.answer_photo(photo='http://telegra.ph//file/8323ba43e0a2a0825cb9f.jpg', caption="Namunaga binoan Abituriyent ID raqamini kiriting👇", reply_markup=menu_back_button)
     await menu_State.id.set()
 
 
@@ -25,7 +25,7 @@ async def result_id(message: types.Message, state: FSMContext):
             await message.answer(answer, reply_markup=menu_back_button)
             await state.finish()
         except:
-            await message.reply("Iltimos ID raqam kiriting", reply_markup=menu_back_button)
+            await message.reply_photo(photo='http://telegra.ph//file/8323ba43e0a2a0825cb9f.jpg',caption="Iltimos Namunaga binoan ID raqam kiriting👇", reply_markup=menu_back_button)
             await next(result_id)
 
             await state.finish()
