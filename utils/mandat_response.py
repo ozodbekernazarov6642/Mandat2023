@@ -81,11 +81,12 @@ def return_id_pprint(id):
 		querystring = {"id": f"{id}", "year": "2023"}
 
 		headers = {
-			"X-RapidAPI-Key": "e1138de0bamshf4bab9b76bb7f1ep16ce46jsn30e66de2587d",
+			"X-RapidAPI-Key": "26c3feb67amsh6ce49b2cd1d9c02p128ddbjsnd16361994887",
 			"X-RapidAPI-Host": "mandat-api.p.rapidapi.com"
 		}
 
 		response = requests.get(url, headers=headers, params=querystring)
+
 		if response.json()['status'] != False:
 			if response.json()['result'][0]["To'plagan ball"] != 'Qiymatlanmagan!':
 				student_name = response.json()['result'][0]['F.I.SH']
@@ -122,7 +123,7 @@ if __name__ == "__main__":
 
 	url = "https://mandat-api.p.rapidapi.com/mandat/result/"
 
-	querystring = {"id": "2518487", "year": "2023"}
+	querystring = {"id": "2117986", "year": "2023"}
 
 	headers = {
 		"X-RapidAPI-Key": "e1138de0bamshf4bab9b76bb7f1ep16ce46jsn30e66de2587d",
