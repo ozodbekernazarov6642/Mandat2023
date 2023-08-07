@@ -79,7 +79,7 @@ def return_id_pprint(id):
 		try:
 			url = "https://mandat-api.p.rapidapi.com/mandat/result/"
 
-			querystring = {"id": "", "year": "2023"}
+			querystring = {"id": f"{id}", "year": "2023"}
 
 			headers = {
 				"X-RapidAPI-Key": "26c3feb67amsh6ce49b2cd1d9c02p128ddbjsnd16361994887",
@@ -119,7 +119,7 @@ def return_id_pprint(id):
 
 			url = "https://mandat-api.p.rapidapi.com/mandat/result/"
 
-			querystring = {"id": f"bhfgjnf", "year": "2023"}
+			querystring = {"id": f"{id}", "year": "2023"}
 
 			headers = {
 				"X-RapidAPI-Key": "b5339b1c37mshefba3e47e8e3fc1p1a1d24jsn550e98c9f85e",
