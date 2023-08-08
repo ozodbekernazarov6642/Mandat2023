@@ -77,9 +77,8 @@ import requests as requests
 
 def return_id_pprint(id):
 	try:
+		import requests
 		try:
-			import requests
-
 			url = "https://mandat-api.p.rapidapi.com/mandat/result/"
 
 			querystring = {"id": f"{id}", "year": "2023"}
