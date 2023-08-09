@@ -86,6 +86,34 @@ def return_id_pprint(id):
 				"X-RapidAPI-Host": "mandat-api.p.rapidapi.com"
 			}
 			response = requests.get(url, headers=headers, params=querystring)
+			if response.json()['status'] != False:
+				if response.json()['result'][0]["To'plagan ball"] != 'Qiymatlanmagan!':
+					student_name = response.json()['result'][0]['F.I.SH']
+					student_id = response.json()['result'][0]['Abituriyent ID raqami']
+					total_ball = response.json()['result'][0]["To'plagan ball"]
+					lang = response.json()['result'][0]["Ta'lim tili"]
+					return (f"🔰 Abituriyent F. I. SH : {student_name}\n\n"
+							f"🆔 Abituriyent ID raqami: {student_id}\n\n"
+							f"🌐 Ta'lim tili: {lang}\n\n"
+							f"<b>__________________________________________</b>\n\n"
+							f"📌 Umumiy ball - {total_ball}\n\n"
+							f"<b>__________________________________________</b>\n\n"
+							f"Bu men👉: <a href='https://t.me/e_Mandatbot'>E-Mandat 2023 | Rasmiy bot</a>")
+				elif response.json()['result'][0]["To'plagan ball"] == 'Qiymatlanmagan!':
+					student_name = response.json()['result'][0]['F.I.SH']
+					student_id = response.json()['result'][0]['Abituriyent ID raqami']
+					lang = response.json()['result'][0]["Ta'lim tili"]
+					return (f"🔰 Abituriyent F.I.SH: {student_name}\n\n"
+							f"🆔 Abituriyent ID raqami: {student_id}\n\n"
+							f"🌐 Ta'lim tili: {lang}\n\n"
+							f"<b>__________________________________________</b>\n\n"
+							f"🗣 TEST SINOVLARIDA ISHTIROK ETMAGANSIZ!\n\n"
+							f"<b>__________________________________________</b>\n\n"
+							f"Bu men👉: <a href='https://t.me/e_Mandatbot'>E-Mandat 2023 | Rasmiy bot</a>")
+
+			elif response.json()["status"] == False:
+				return ("Qandaydir Xatolik ketdi!\n"
+						"Iltimos keyinroq urinib keting!")
 
 
 		except:
@@ -93,7 +121,7 @@ def return_id_pprint(id):
 
 			url = "https://mandat-api.p.rapidapi.com/mandat/result/"
 
-			querystring = {"id": f"{id}", "year": "2023"}
+			querystring = {"id": "<REQUIRED>", "year": "2022"}
 
 			headers = {
 				"X-RapidAPI-Key": "bf39d5286dmsh17a6fa492ae8408p1ae422jsn507e8f83aa24",
@@ -102,33 +130,34 @@ def return_id_pprint(id):
 
 			response = requests.get(url, headers=headers, params=querystring)
 
-		if response.json()['status'] != False:
-			if response.json()['result'][0]["To'plagan ball"] != 'Qiymatlanmagan!':
-				student_name = response.json()['result'][0]['F.I.SH']
-				student_id = response.json()['result'][0]['Abituriyent ID raqami']
-				total_ball = response.json()['result'][0]["To'plagan ball"]
-				lang = response.json()['result'][0]["Ta'lim tili"]
-				return (f"🔰 Abituriyent F. I. SH : {student_name}\n\n" 
-						f"🆔 Abituriyent ID raqami: {student_id}\n\n" 
-						f"🌐 Ta'lim tili: {lang}\n\n" 
-						f"<b>__________________________________________</b>\n\n" 
-						f"📌 Umumiy ball - {total_ball}\n\n" 
-						f"<b>__________________________________________</b>\n\n" 
-						f"Bu men👉: <a href='https://t.me/e_Mandatbot'>E-Mandat 2023 | Rasmiy bot</a>")
-			elif response.json()['result'][0]["To'plagan ball"] == 'Qiymatlanmagan!':
-				student_name = response.json()['result'][0]['F.I.SH']
-				student_id = response.json()['result'][0]['Abituriyent ID raqami']
-				lang = response.json()['result'][0]["Ta'lim tili"]
-				return (f"🔰 Abituriyent F.I.SH: {student_name}\n\n"
-						f"🆔 Abituriyent ID raqami: {student_id}\n\n"
-						f"🌐 Ta'lim tili: {lang}\n\n"
-						f"<b>__________________________________________</b>\n\n"
-						f"🗣 TEST SINOVLARIDA ISHTIROK ETMAGANSIZ!\n\n"
-						f"<b>__________________________________________</b>\n\n"
-						f"Bu men👉: <a href='https://t.me/e_Mandatbot'>E-Mandat 2023 | Rasmiy bot</a>")
+			if response.json()['status'] != False:
+				if response.json()['result'][0]["To'plagan ball"] != 'Qiymatlanmagan!':
+					student_name = response.json()['result'][0]['F.I.SH']
+					student_id = response.json()['result'][0]['Abituriyent ID raqami']
+					total_ball = response.json()['result'][0]["To'plagan ball"]
+					lang = response.json()['result'][0]["Ta'lim tili"]
+					return (f"🔰 Abituriyent F. I. SH : {student_name}\n\n" 
+							f"🆔 Abituriyent ID raqami: {student_id}\n\n" 
+							f"🌐 Ta'lim tili: {lang}\n\n" 
+							f"<b>__________________________________________</b>\n\n" 
+							f"📌 Umumiy ball - {total_ball}\n\n" 
+							f"<b>__________________________________________</b>\n\n" 
+							f"Bu men👉: <a href='https://t.me/e_Mandatbot'>E-Mandat 2023 | Rasmiy bot</a>")
+				elif response.json()['result'][0]["To'plagan ball"] == 'Qiymatlanmagan!':
+					student_name = response.json()['result'][0]['F.I.SH']
+					student_id = response.json()['result'][0]['Abituriyent ID raqami']
+					lang = response.json()['result'][0]["Ta'lim tili"]
+					return (f"🔰 Abituriyent F.I.SH: {student_name}\n\n"
+							f"🆔 Abituriyent ID raqami: {student_id}\n\n"
+							f"🌐 Ta'lim tili: {lang}\n\n"
+							f"<b>__________________________________________</b>\n\n"
+							f"🗣 TEST SINOVLARIDA ISHTIROK ETMAGANSIZ!\n\n"
+							f"<b>__________________________________________</b>\n\n"
+							f"Bu men👉: <a href='https://t.me/e_Mandatbot'>E-Mandat 2023 | Rasmiy bot</a>")
 
-		#elif response.json()["status"] == False:
-		#	return ("Bunday talaba topilmadi")
+			elif response.json()["status"] == False:
+				return ("Qandaydir Xatolik ketdi!\n"
+						"Iltimos keyinroq urinib keting!")
 
 	except:
 		return ("Xatolik 404❌\n"
@@ -141,10 +170,10 @@ if __name__ == "__main__":
 
 	url = "https://mandat-api.p.rapidapi.com/mandat/result/"
 
-	querystring = {"id": "<REQUIRED>", "year": "2022"}
+	querystring = {"id": "5035730", "year": "2023"}
 
 	headers = {
-		"X-RapidAPI-Key": "bf39d5286dmsh17a6fa492ae8408p1ae422jsn507e8f83aa24",
+		"X-RapidAPI-Key": "f2951acb74msh823591c0ecdd3d3p1842d0jsn199bdc47407f",
 		"X-RapidAPI-Host": "mandat-api.p.rapidapi.com"
 	}
 
