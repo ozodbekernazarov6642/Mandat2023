@@ -77,43 +77,30 @@ import requests as requests
 
 def return_id_pprint(id):
 	try:
-		import requests
 		try:
+			"""  aliernazarov192@gmail.com """
+			url = "https://mandat-api.p.rapidapi.com/mandat/result/"
+			querystring = {"id": f"{id}", "year": "2023"}
+			headers = {
+				"X-RapidAPI-Key": "5bbf0e5359msh5642f9358f9ea88p132830jsnaa59a66fca3f",
+				"X-RapidAPI-Host": "mandat-api.p.rapidapi.com"
+			}
+			response = requests.get(url, headers=headers, params=querystring)
+
+
+		except:
+			""" birnimabirnima107@gmail.com """
+
 			url = "https://mandat-api.p.rapidapi.com/mandat/result/"
 
 			querystring = {"id": f"{id}", "year": "2023"}
 
 			headers = {
-				"X-RapidAPI-Key": "dad1204f7bmsh16618bc7d3d84eap15f5d1jsn648bd08ede99",
+				"X-RapidAPI-Key": "bf39d5286dmsh17a6fa492ae8408p1ae422jsn507e8f83aa24",
 				"X-RapidAPI-Host": "mandat-api.p.rapidapi.com"
 			}
 
 			response = requests.get(url, headers=headers, params=querystring)
-		except:
-			try:
-				url = "https://mandat-api.p.rapidapi.com/mandat/result/"
-
-				querystring = {"id": f"{id}", "year": "2023"}
-
-				headers = {
-					"X-RapidAPI-Key": "5bbf0e5359msh5642f9358f9ea88p132830jsnaa59a66fca3f",
-					"X-RapidAPI-Host": "mandat-api.p.rapidapi.com"
-				}
-
-				response = requests.get(url, headers=headers, params=querystring)
-
-			except:
-				import requests
-				url = "https://mandat-api.p.rapidapi.com/mandat/result/"
-
-				querystring = {"id": f"{id}", "year": "2023"}
-
-				headers = {
-					"X-RapidAPI-Key": "66356c6de4msh52899880e201f1fp12e9d5jsnc0c6fc217826",
-					"X-RapidAPI-Host": "mandat-api.p.rapidapi.com"
-				}
-
-				response = requests.get(url, headers=headers, params=querystring)
 
 		if response.json()['status'] != False:
 			if response.json()['result'][0]["To'plagan ball"] != 'Qiymatlanmagan!':
@@ -140,8 +127,8 @@ def return_id_pprint(id):
 						f"<b>__________________________________________</b>\n\n"
 						f"Bu men👉: <a href='https://t.me/e_Mandatbot'>E-Mandat 2023 | Rasmiy bot</a>")
 
-		elif response.json()["status"] == False:
-			return ("Bunday talaba topilmadi")
+		#elif response.json()["status"] == False:
+		#	return ("Bunday talaba topilmadi")
 
 	except:
 		return ("Xatolik 404❌\n"
@@ -150,14 +137,17 @@ def return_id_pprint(id):
 				"Admin:@Ozodbek_Ernazarov")
 
 if __name__ == "__main__":
+	import requests
+
 	url = "https://mandat-api.p.rapidapi.com/mandat/result/"
 
-	querystring = {"id": f"fgdtsk", "year": "2023"}
+	querystring = {"id": "<REQUIRED>", "year": "2022"}
 
 	headers = {
-		"X-RapidAPI-Key": "66356c6de4msh52899880e201f1fp12e9d5jsnc0c6fc217826",
+		"X-RapidAPI-Key": "bf39d5286dmsh17a6fa492ae8408p1ae422jsn507e8f83aa24",
 		"X-RapidAPI-Host": "mandat-api.p.rapidapi.com"
 	}
 
 	response = requests.get(url, headers=headers, params=querystring)
+
 	print(response.json())
