@@ -112,7 +112,7 @@ def return_id_pprint(id):
 							f"Bu men👉: <a href='https://t.me/e_Mandatbot'>E-Mandat 2023 | Rasmiy bot</a>")
 
 			elif response.json()["status"] == False:
-				return ("Qandaydir Xatolik ketdi!\n"
+				return ("Qandaydir Xatolik yuzberdi!\n"
 						"Iltimos keyinroq urinib keting!")
 
 
@@ -121,7 +121,7 @@ def return_id_pprint(id):
 
 			url = "https://mandat-api.p.rapidapi.com/mandat/result/"
 
-			querystring = {"id": "<REQUIRED>", "year": "2022"}
+			querystring = {"id": f"{id}", "year": "2023"}
 
 			headers = {
 				"X-RapidAPI-Key": "bf39d5286dmsh17a6fa492ae8408p1ae422jsn507e8f83aa24",
@@ -156,18 +156,19 @@ def return_id_pprint(id):
 							f"Bu men👉: <a href='https://t.me/e_Mandatbot'>E-Mandat 2023 | Rasmiy bot</a>")
 
 			elif response.json()["status"] == False:
-				return ("Qandaydir Xatolik ketdi!\n"
+				return ("Qandaydir Xatolik yuzberdi!\n"
 						"Iltimos keyinroq urinib keting!")
 
 	except:
 		return ("Xatolik 404❌\n"
 			  "Serverda nosozlik\n"
 				"Tez orada xatoliklar to'g'irlnadi!\n"
-				"Admin:@Ozodbek_Ernazarov")
+				"Admin:@Ozodbek_Ernazarov\n"
+				"Admin:@Ernazarov_Alibek")
 
 if __name__ == "__main__":
 	import requests
-
+	"""ozodbekernazwrov70@gmail.com"""
 	url = "https://mandat-api.p.rapidapi.com/mandat/result/"
 
 	querystring = {"id": "5035730", "year": "2023"}
