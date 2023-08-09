@@ -18,7 +18,7 @@ async def answer_handler_id(message: types.Message):
 @dp.message_handler(state=menu_State.id)
 async def result_id(message: types.Message, state: FSMContext):
         try:
-            id = int(message.text)
+            raqam = int(message.text)
             stiker = await message.answer_sticker(InputFile(path_or_bytesio='emoji/AnimatedSticker.tgs'))
             answer = return_id_pprint(message.text)
             await stiker.delete()
