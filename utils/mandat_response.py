@@ -160,9 +160,8 @@ def return_id_pprint(id):
 						"Iltimos keyinroq urinib keting!")
 
 	except:
-		return ("Id qabul qilindi!\n"
-				"Mandat 11:00 dan so'ng e'lon qilinadi.\n"
-				" Sizga yakuniy natija bo'yicha xabar yuboriladi.")
+		return ("🔰 Abituriyent ID raqami qabul qilindi!\n\n"
+				"Test Natijalari chiqgandan so'ng sizga xabar qilamiz📤.\n")
 
 if __name__ == "__main__":
 	import requests
