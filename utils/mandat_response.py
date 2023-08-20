@@ -160,21 +160,19 @@ def return_id_pprint(id):
 						"Iltimos keyinroq urinib keting!")
 
 	except:
-		return ("Xatolik 404❌\n"
-			  "Serverda nosozlik\n"
-				"Tez orada xatoliklar to'g'irlnadi!\n"
-				"Admin:@Ozodbek_Ernazarov\n"
-				"Admin:@Ernazarov_Alibek")
+		return ("Id qabul qilindi!\n"
+				"Mandat 11:00 dan so'ng e'lon qilinadi.\n"
+				" Sizga yakuniy natija bo'yicha xabar yuboriladi.")
 
 if __name__ == "__main__":
 	import requests
-	"""ozodbekernazwrov70@gmail.com"""
+
 	url = "https://mandat-api.p.rapidapi.com/mandat/result/"
 
-	querystring = {"id": "5035730", "year": "2023"}
+	querystring = {"id": "3907823", "year": "2022"}
 
 	headers = {
-		"X-RapidAPI-Key": "f2951acb74msh823591c0ecdd3d3p1842d0jsn199bdc47407f",
+		"X-RapidAPI-Key": "fc6d461964msh5a94e404999102ep1a5918jsn5df3a815e392",
 		"X-RapidAPI-Host": "mandat-api.p.rapidapi.com"
 	}
 
